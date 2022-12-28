@@ -16,5 +16,9 @@ Feature: Demoblaze carousel functionality
         When I select the last image of the carousel
         And I click on the next arrow
         Then I should see the first image of the carousel
+
+                    Scenario: interact with the carousel indicators
+        When I select the second indicator of the carousel
+        Then I should see the second image of the carousel
  
  

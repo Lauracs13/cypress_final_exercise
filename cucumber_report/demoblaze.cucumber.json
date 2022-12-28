@@ -1,6 +1,6 @@
 [
   {
-    "description": "    As a user\n    I want to ",
+    "description": "    As a user\n    I want to easily navigate through the different cellphone brands in the carousel \n    So that I can choose the one I like",
     "keyword": "Feature",
     "name": "Demoblaze carousel functionality",
     "line": 1,
@@ -11,7 +11,7 @@
       {
         "id": "demoblaze-carousel-functionality;interact-with-the-previous-arrow-of-the-carousel",
         "keyword": "Scenario",
-        "line": 9,
+        "line": 10,
         "name": "interact with the previous arrow of the carousel",
         "tags": [],
         "type": "scenario",
@@ -19,41 +19,131 @@
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 7,
+            "line": 8,
             "name": "I visit the Demoblaze homepage",
             "result": {
               "status": "passed",
-              "duration": 883000000
+              "duration": 863000000
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 10,
+            "line": 11,
             "name": "I select the first image of the carousel",
             "result": {
               "status": "passed",
-              "duration": 119000000
+              "duration": 120000000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 11,
+            "line": 12,
             "name": "I click on the previous arrow",
             "result": {
               "status": "passed",
-              "duration": 1144000000
+              "duration": 1139000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 12,
+            "line": 13,
             "name": "I should see the last image of the carousel",
             "result": {
               "status": "passed",
-              "duration": 23000000
+              "duration": 20000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "demoblaze-carousel-functionality;interact-with-the-next-arrow-of-the-carousel",
+        "keyword": "Scenario",
+        "line": 15,
+        "name": "interact with the next arrow of the carousel",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I visit the Demoblaze homepage",
+            "result": {
+              "status": "passed",
+              "duration": 244000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "I select the last image of the carousel",
+            "result": {
+              "status": "passed",
+              "duration": 1134000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 17,
+            "name": "I click on the next arrow",
+            "result": {
+              "status": "passed",
+              "duration": 1121000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 18,
+            "name": "I should see the first image of the carousel",
+            "result": {
+              "status": "passed",
+              "duration": 24000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "demoblaze-carousel-functionality;interact-with-the-carousel-indicators",
+        "keyword": "Scenario",
+        "line": 20,
+        "name": "interact with the carousel indicators",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I visit the Demoblaze homepage",
+            "result": {
+              "status": "passed",
+              "duration": 336000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 21,
+            "name": "I select the second indicator of the carousel",
+            "result": {
+              "status": "passed",
+              "duration": 91000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 22,
+            "name": "I should see the second image of the carousel",
+            "result": {
+              "status": "passed",
+              "duration": 571000000
             }
           }
         ]
