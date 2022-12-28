@@ -1,0 +1,20 @@
+Feature: Demoblaze carousel functionality
+ 
+    As a user
+    I want to easily navigate through the different cellphone brands in the carousel 
+    So that I can choose the one I like
+ 
+    Background:
+        Given I visit the Demoblaze homepage
+
+           Scenario: interact with the previous arrow of the carousel
+        When I select the first image of the carousel
+        And I click on the previous arrow
+        Then I should see the last image of the carousel
+
+            Scenario: interact with the next arrow of the carousel
+        When I select the last image of the carousel
+        And I click on the next arrow
+        Then I should see the first image of the carousel
+ 
+ 
