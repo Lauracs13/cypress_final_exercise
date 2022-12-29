@@ -1,5 +1,5 @@
 import { Given, When, Then } from "cypress-cucumber-preprocessor/steps";
-import Homepage from "../../support/pages/DemoblazeHomepage";
+import Homepage from "../../support/pages/Homepage";
 const homepage = new Homepage();
 
 Given('I visit the Demoblaze homepage', () => {

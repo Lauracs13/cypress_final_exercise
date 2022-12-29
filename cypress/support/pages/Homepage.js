@@ -7,7 +7,10 @@ var homepageLocators = {
     carouselFirstIndicator: '[data-slide-to="0"]',
     lastImageOfTheCarousel: '.carousel-item:last-child',
     firstImageOfTheCarousel: '.carousel-item:first-child',
-    secondImageOfTheCarousel: '.carousel-item:nth-child(2)'
+    secondImageOfTheCarousel: '.carousel-item:nth-child(2)',
+categoriesList: '.list-group'
+
+
 }
 
 class Homepage {
@@ -20,6 +23,8 @@ class Homepage {
     lastImageOfTheCarousel() { return cy.get(homepageLocators.lastImageOfTheCarousel) }
     firstImageOfTheCarousel() { return cy.get(homepageLocators.firstImageOfTheCarousel) }
     secondImageOfTheCarousel() { return cy.get(homepageLocators.secondImageOfTheCarousel) }
+    categoriesList() { return cy.get(homepageLocators.categoriesList) }
+    
     waitUntilInactive(selector) {
         cy.wait(1000)
             .then(() => {
