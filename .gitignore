@@ -1,1 +1,5 @@
 node_modules
+cypress/videos
+.DS_Store
+cypress/screenshots
+cucumber_report/

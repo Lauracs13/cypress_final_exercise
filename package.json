@@ -5,28 +5,21 @@
   "main": "index.js",
   "scripts": {
     "test": "npx cypress run",
-    "posttest": "node cucumber-html-report.js"
+    "allure": "npx cypress run --env allure=true",
+    "allure:results": "allure serve allure-results/",
+    "tag": "npx cypress run -e TAGS=@regression"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@shelex/cypress-allure-plugin": "^2.34.0",
+    "allure-commandline": "^2.20.1",
     "cypress": "^9.7.0",
     "cypress-cucumber-preprocessor": "^4.3.1"
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true,
-    "cucumberJson": {
-      "generate": true,
-      "outputFolder": "cucumber_report",
-      "filePrefix": "",
-      "fileSuffix": ".cucumber"
-    }
-  },
-  "dependencies": {
-    "cucumber-html-reporter": "^5.5.0",
-    "cypress-multi-reporters": "^1.6.1",
-    "multiple-cucumber-html-reporter": "^1.21.4"
+    "filterSpecs": true
   }
 }

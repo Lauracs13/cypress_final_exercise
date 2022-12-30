@@ -1,5 +1,4 @@
 {
-  "baseUrl": "https://example.cypress.io",
+  "baseUrl": "https://www.demoblaze.com",
   "testFiles": "**/*.feature"
-
 }

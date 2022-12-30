@@ -1,0 +1,263 @@
+[
+  {
+    "description": "  As a user\n  I want to easily navigate through the different header links",
+    "keyword": "Feature",
+    "name": "Demoblaze header links functionality",
+    "line": 1,
+    "id": "demoblaze-header-links-functionality",
+    "tags": [],
+    "uri": "header.feature",
+    "elements": [
+      {
+        "id": "demoblaze-header-links-functionality;go-to-the-homepage",
+        "keyword": "Scenario",
+        "line": 8,
+        "name": "go to the homepage",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I visit the Demoblaze homepage",
+            "result": {
+              "status": "passed",
+              "duration": 1222000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "I click on the Home link",
+            "result": {
+              "status": "passed",
+              "duration": 283000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "a carousel should be displayed",
+            "result": {
+              "status": "passed",
+              "duration": 16000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "a categories list should be displayed",
+            "result": {
+              "status": "passed",
+              "duration": 18000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "demoblaze-header-links-functionality;get-the-contact-form",
+        "keyword": "Scenario",
+        "line": 12,
+        "name": "get the Contact form",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I visit the Demoblaze homepage",
+            "result": {
+              "status": "passed",
+              "duration": 230000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "I click on the Contact link",
+            "result": {
+              "status": "passed",
+              "duration": 114000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "I should see a form requesting my contact information",
+            "result": {
+              "status": "passed",
+              "duration": 124000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "demoblaze-header-links-functionality;interact-with-the-about-us-link",
+        "keyword": "Scenario",
+        "line": 16,
+        "name": "interact with the About us link",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I visit the Demoblaze homepage",
+            "result": {
+              "status": "passed",
+              "duration": 233000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 17,
+            "name": "I click on the About us link",
+            "result": {
+              "status": "passed",
+              "duration": 92000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 18,
+            "name": "a video should appear with the option to play it",
+            "result": {
+              "status": "passed",
+              "duration": 164000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "demoblaze-header-links-functionality;interact-with-the-cart-link",
+        "keyword": "Scenario",
+        "line": 20,
+        "name": "interact with the Cart link",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I visit the Demoblaze homepage",
+            "result": {
+              "status": "passed",
+              "duration": 243000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 21,
+            "name": "I click on the Cart link",
+            "result": {
+              "status": "passed",
+              "duration": 583000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 22,
+            "name": "I should see an option to place an order",
+            "result": {
+              "status": "passed",
+              "duration": 8000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "demoblaze-header-links-functionality;get-the-log-in-form",
+        "keyword": "Scenario",
+        "line": 24,
+        "name": "get the Log in form",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I visit the Demoblaze homepage",
+            "result": {
+              "status": "passed",
+              "duration": 222000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 25,
+            "name": "I click on the Log in link",
+            "result": {
+              "status": "passed",
+              "duration": 100000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 26,
+            "name": "I should see the log in form",
+            "result": {
+              "status": "passed",
+              "duration": 136000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "demoblaze-header-links-functionality;get-the-sign-up-form",
+        "keyword": "Scenario",
+        "line": 28,
+        "name": "get the Sign up form",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I visit the Demoblaze homepage",
+            "result": {
+              "status": "passed",
+              "duration": 201000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 29,
+            "name": "I click on the Sign up link",
+            "result": {
+              "status": "passed",
+              "duration": 98000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 30,
+            "name": "I should see the sign up form",
+            "result": {
+              "status": "passed",
+              "duration": 164000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
