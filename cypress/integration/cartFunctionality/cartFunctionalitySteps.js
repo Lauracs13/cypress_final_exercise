@@ -8,6 +8,35 @@ const homepage = new Homepage();
 import ProductDetails from "../../support/pages/ProductDetails";
 const product = new ProductDetails();
 
+When('I click on the phones category', () => {
+    homepage.clickOnCategory('phones');
+});
+
+Then('all the products found are phones', () => {
+    homepage.waitForCategoryResponse();
+    homepage.getCategoryResponseItems()
+        .each(item => cy.wrap(item).its('cat').should('eq', 'phone'))
+});
+
+When('I click on the laptops category', () => {
+    homepage.clickOnCategory('laptops');
+});
+
+Then('all the products found are laptops', () => {
+    homepage.waitForCategoryResponse();
+    homepage.getCategoryResponseItems()
+        .each(item => cy.wrap(item).its('cat').should('eq', 'notebook'))
+});
+
+When('I click on the monitors category', () => {
+    homepage.clickOnCategory('monitors');
+});
+
+Then('all the products found are monitors', () => {
+    homepage.waitForCategoryResponse();
+    homepage.getCategoryResponseItems()
+        .each(item => cy.wrap(item).its('cat').should('eq', 'monitor'));
+});
 Given('I visit the Demoblaze homepage', () => {
     cy.visit('/');
 });
@@ -51,28 +80,28 @@ Then('the product should disappear', () => {
     cy.get("@selectedProduct").then(name => {
         cartPage.productsList().should('not.contain', name);
     });
-
-    When('I click on Place Order', () => {
-        cartPage.placeOrderButton().click();
-    });
-
-    When('I complete the form', () => {
-        cy.fixture('data').then(data => {
-            cartPage.nameInput().invoke('val', data.name);
-            cartPage.countryInput().invoke('val', data.country);
-            cartPage.cityInput().invoke('val', data.city);
-            cartPage.creditCardInput().invoke('val', data.creditCard);
-            cartPage.monthInput().invoke('val', data.month);
-            cartPage.yearInput().invoke('val', data.year);
-            cartPage.purchaseButton().click();
-        })
-    });
-
-    Then('I should see the confirmation of my purchase', () => {
-        cy.fixture('data').then(data => {
-            cartPage.confirmationPurchaseAlert().should('be.visible');
-            cartPage.confirmationPurchaseAlert().should('contain', data.successPurchaseMessage);
-        })
-    });
-
 });
+
+When('I click on Place Order', () => {
+    cartPage.placeOrderButton().click();
+});
+
+When('I complete the form', () => {
+    cy.fixture('data').then(data => {
+        cartPage.nameInput().invoke('val', data.name);
+        cartPage.countryInput().invoke('val', data.country);
+        cartPage.cityInput().invoke('val', data.city);
+        cartPage.creditCardInput().invoke('val', data.creditCard);
+        cartPage.monthInput().invoke('val', data.month);
+        cartPage.yearInput().invoke('val', data.year);
+        cartPage.purchaseButton().click();
+    })
+});
+
+Then('I should see the confirmation of my purchase', () => {
+    cy.fixture('data').then(data => {
+        cartPage.confirmationPurchaseAlert().should('be.visible');
+        cartPage.confirmationPurchaseAlert().should('contain', data.successPurchaseMessage);
+    })
+});
+

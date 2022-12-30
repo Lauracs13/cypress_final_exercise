@@ -50,7 +50,7 @@ Then('I should see different Cart page elements', () => {
   cartPage.placeOrderButton().should('be.visible');
   cartPage.getCartPageBody();
   cy.fixture('data').then(data => {
- cy.get('@bodyCart').should('include', data.expectedCartTitle)
+    cy.get('@bodyCart').should('include', data.expectedCartTitle)
   })
 });
 

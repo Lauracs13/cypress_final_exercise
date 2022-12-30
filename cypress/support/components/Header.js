@@ -38,8 +38,6 @@ class Header {
     signUpLink() { return cy.get(headerLocators.signUpLink) }
     signUsername() { return cy.get(headerLocators.signUsername) }
     signPassword() { return cy.get(headerLocators.signPassword) }
-
-
 }
 
 export default Header;

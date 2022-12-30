@@ -10,8 +10,8 @@ var homepageLocators = {
     secondImageOfTheCarousel: '.carousel-item:nth-child(2)',
     categoriesList: '.list-group',
     productCardTitles: '.hrefch',
-   // #tbodyid> div
-   }
+    categories: { phones: 'a:contains(Phones)', laptops: 'a:contains(Laptops)', monitors: 'a:contains(Monitors)' }
+}
 
 class Homepage {
     carousel() { return cy.get(homepageLocators.carousel) }
@@ -56,13 +56,30 @@ class Homepage {
     waitUntilLastImageBecomesActive() {
         this.waitUntilActive(homepageLocators.lastImageOfTheCarousel)
     }
-    selectRandomProduct() {  
-       cy.get(homepageLocators.productCardTitles).its('length')
-       .then(elementCount => {
-        let selected = Cypress._.random(elementCount - 1);
-      cy.get(homepageLocators.productCardTitles).eq(selected).click()
-      .invoke('text').as('selectedProduct');
-   });
-}
+    selectRandomProduct() {
+        cy.get(homepageLocators.productCardTitles).its('length')
+            .then(elementCount => {
+                let selected = Cypress._.random(elementCount - 1);
+                cy.get(homepageLocators.productCardTitles).eq(selected).click()
+                    .invoke('text').as('selectedProduct');
+            });
+    }
+    clickOnCategory(category) {
+        const categorySelector = homepageLocators.categories[category];
+        cy.fixture('data').as('data');
+        cy.get("@data").then(data => {
+            cy.intercept('POST', data.categoriesAPI)
+                .as('categoryResponse')
+                .then(() => {
+                    cy.get(categorySelector).click();
+                })
+        });
+    }
+    waitForCategoryResponse() {
+        cy.wait('@categoryResponse', { timeout: 1000 })
+    }
+    getCategoryResponseItems() {
+        return cy.get("@categoryResponse").its('response.body.Items')
+    }
 }
 export default Homepage;
