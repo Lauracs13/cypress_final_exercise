@@ -56,4 +56,23 @@ Then('the product should disappear', () => {
         cartPage.placeOrderButton().click();
     });
 
+    When('I complete the form', () => {
+        cy.fixture('data').then(data => {
+            cartPage.nameInput().invoke('val', data.name);
+            cartPage.countryInput().invoke('val', data.country);
+            cartPage.cityInput().invoke('val', data.city);
+            cartPage.creditCardInput().invoke('val', data.creditCard);
+            cartPage.monthInput().invoke('val', data.month);
+            cartPage.yearInput().invoke('val', data.year);
+            cartPage.purchaseButton().click();
+        })
+    });
+
+    Then('I should see the confirmation of my purchase', () => {
+        cy.fixture('data').then(data => {
+            cartPage.confirmationPurchaseAlert().should('be.visible');
+            cartPage.confirmationPurchaseAlert().should('contain', data.successPurchaseMessage);
+        })
+    });
+
 });
