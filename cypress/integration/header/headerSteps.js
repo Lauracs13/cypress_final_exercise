@@ -46,8 +46,12 @@ When('I click on the Cart link', () => {
   header.cartLink().click();
 });
 
-Then('I should see an option to place an order', () => {
+Then('I should see different Cart page elements', () => {
   cartPage.placeOrderButton().should('be.visible');
+  cartPage.getCartPageBody();
+  cy.fixture('data').then(data => {
+ cy.get('@bodyCart').should('include', data.expectedCartTitle)
+  })
 });
 
 When('I click on the Log in link', () => {

@@ -22,10 +22,15 @@ class CartPage {
     creditCardInput() { return cy.get(cartLocators.creditCardInput) }
     monthInput() { return cy.get(cartLocators.monthInput) }
     yearInput() { return cy.get(cartLocators.yearInput) }
-    purchaseButton() { return cy.get(cartLocators.purchaseButton) }    
-    confirmationPurchaseAlert() { return cy.get(cartLocators.confirmationPurchaseAlert) }    
-
+    purchaseButton() { return cy.get(cartLocators.purchaseButton) }
+    confirmationPurchaseAlert() { return cy.get(cartLocators.confirmationPurchaseAlert) }
+    getCartPageBody() {
+        cy.fixture('data').as('data');
+        cy.get("@data").then(data => {
+            cy.request(data.cartPageEndpoint).its('body').as('bodyCart')
+        })
+    }
 }
-    
+
 
 export default CartPage;

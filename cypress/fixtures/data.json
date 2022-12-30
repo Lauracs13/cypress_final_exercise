@@ -5,5 +5,7 @@
   "creditCard": 54321,
   "month": 12,
   "year":300,
-  "successPurchaseMessage": "Thank you for your purchase!"
+  "successPurchaseMessage": "Thank you for your purchase!",
+  "expectedCartTitle": "<h2>Products</h2>",
+  "cartPageEndpoint": "/cart.html"
 }

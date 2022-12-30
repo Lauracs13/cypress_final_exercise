@@ -32,7 +32,7 @@ When('I go to the Cart page', () => {
 });
 
 Then('I should see the product in the cart list', () => {
-    cy.get("@selectedProduct").then(name => {
+    cy.get('@selectedProduct').then(name => {
         cartPage.productsList().should('contain', name);
     });
 });

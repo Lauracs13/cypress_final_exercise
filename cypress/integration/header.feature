@@ -19,7 +19,7 @@ Feature: Demoblaze header links functionality
 
   Scenario: interact with the Cart link
     When I click on the Cart link
-    Then I should see an option to place an order
+    Then I should see different Cart page elements
 
   Scenario: get the Log in form
     When I click on the Log in link
