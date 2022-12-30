@@ -1,0 +1,163 @@
+[
+  {
+    "description": "    As a user\n    I want to filter the products by categories, add products to the shopping cart, delete them\n    So thai I can finally buy what I want",
+    "keyword": "Feature",
+    "name": "Demoblaze shopping cart functionality",
+    "line": 1,
+    "id": "demoblaze-shopping-cart-functionality",
+    "tags": [],
+    "uri": "cartFunctionality.feature",
+    "elements": [
+      {
+        "id": "demoblaze-shopping-cart-functionality;see-the-details-of-a-product",
+        "keyword": "Scenario",
+        "line": 9,
+        "name": "see the details of a product",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I visit the Demoblaze homepage",
+            "result": {
+              "status": "passed",
+              "duration": 2608000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "I click on a product card",
+            "result": {
+              "status": "passed",
+              "duration": 533000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "I should see the details of the product",
+            "result": {
+              "status": "passed",
+              "duration": 531000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "demoblaze-shopping-cart-functionality;add-product-to-cart",
+        "keyword": "Scenario",
+        "line": 13,
+        "name": "add product to cart",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I visit the Demoblaze homepage",
+            "result": {
+              "status": "passed",
+              "duration": 242000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 14,
+            "name": "I clicked on a product card",
+            "result": {
+              "status": "passed",
+              "duration": 778000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "I click on Add to cart button",
+            "result": {
+              "status": "passed",
+              "duration": 387000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 16,
+            "name": "I go to the Cart page",
+            "result": {
+              "status": "passed",
+              "duration": 572000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 17,
+            "name": "I should see the product in the cart list",
+            "result": {
+              "status": "passed",
+              "duration": 592000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "demoblaze-shopping-cart-functionality;remove-product-from-cart",
+        "keyword": "Scenario",
+        "line": 19,
+        "name": "remove product from cart",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I visit the Demoblaze homepage",
+            "result": {
+              "status": "passed",
+              "duration": 216000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 20,
+            "name": "I am in the Cart page with a product selected",
+            "result": {
+              "status": "passed",
+              "duration": 1129000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 21,
+            "name": "I click on the delete option in the line product",
+            "result": {
+              "status": "passed",
+              "duration": 634000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 22,
+            "name": "the product should disappear",
+            "result": {
+              "status": "passed",
+              "duration": 435000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

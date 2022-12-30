@@ -1,0 +1,9 @@
+{
+  "name": "User",
+  "country": "Liberland",
+  "city":"Liberland",
+  "creditCard": 54321,
+  "month": 12,
+  "year":300,
+  "successPurchaseMessage": "Thank you for your purchase!"
+}

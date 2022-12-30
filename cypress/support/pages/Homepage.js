@@ -8,10 +8,10 @@ var homepageLocators = {
     lastImageOfTheCarousel: '.carousel-item:last-child',
     firstImageOfTheCarousel: '.carousel-item:first-child',
     secondImageOfTheCarousel: '.carousel-item:nth-child(2)',
-categoriesList: '.list-group'
-
-
-}
+    categoriesList: '.list-group',
+    productCardTitles: '.hrefch',
+   // #tbodyid> div
+   }
 
 class Homepage {
     carousel() { return cy.get(homepageLocators.carousel) }
@@ -24,7 +24,9 @@ class Homepage {
     firstImageOfTheCarousel() { return cy.get(homepageLocators.firstImageOfTheCarousel) }
     secondImageOfTheCarousel() { return cy.get(homepageLocators.secondImageOfTheCarousel) }
     categoriesList() { return cy.get(homepageLocators.categoriesList) }
-    
+    categoriesList() { return cy.get(homepageLocators.categoriesList) }
+    productCardTitles() { return cy.get(homepageLocators.productCardTitles) }
+
     waitUntilInactive(selector) {
         cy.wait(1000)
             .then(() => {
@@ -54,6 +56,13 @@ class Homepage {
     waitUntilLastImageBecomesActive() {
         this.waitUntilActive(homepageLocators.lastImageOfTheCarousel)
     }
+    selectRandomProduct() {  
+       cy.get(homepageLocators.productCardTitles).its('length')
+       .then(elementCount => {
+        let selected = Cypress._.random(elementCount - 1);
+      cy.get(homepageLocators.productCardTitles).eq(selected).click()
+      .invoke('text').as('selectedProduct');
+   });
 }
-
+}
 export default Homepage;
