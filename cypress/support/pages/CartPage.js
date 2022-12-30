@@ -27,7 +27,7 @@ class CartPage {
     getCartPageBody() {
         cy.fixture('data').as('data');
         cy.get("@data").then(data => {
-            cy.request(data.cartPageEndpoint).its('body').as('bodyCart')
+            cy.request(data.cartPageRoute).its('body').as('bodyCart')
         })
     }
 }
